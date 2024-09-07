@@ -1,0 +1,303 @@
+body{
+    background-image: linear-gradient(to right,rgb(42, 42, 65), black);
+    text-align: center;
+    align-items: center;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+.titulo{
+   margin-right: 50%; 
+    display: flex;
+    color: #fff;
+    font-size: 30px;
+    align-items: center;
+}
+
+.logo{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    margin-right: 20px;    
+}
+
+.nav-list li{
+    transition: 0.5s;
+    margin-left: 32px;
+    letter-spacing: 1px;
+}
+
+a{
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.3s;    
+}
+
+a:hover{
+    background-color: rgb(93, 99, 115);
+    opacity: 0.9;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+nav{
+    display: flex;
+   justify-content: space-around;
+   align-items: center;  
+   height: 10vh;
+}
+
+.barra-pesquisa{
+    cursor: pointer;
+    display: flex;
+    margin-right: 100px;
+    align-items: center;
+    justify-content: center;    
+  }
+
+  .btn-pesquisa, .pesquisa{
+    color: #fff;
+    text-align: center;
+    height: 35px;  
+    border: none;
+    background-color: rgb(41, 63, 75);
+    padding: 10px;
+  }
+  
+  .pesquisa{
+    width: 30%;
+    height: 30%;
+  }
+
+.nav-list{
+    list-style: none;
+    display: flex; 
+    font-size: 20hv;
+}
+
+.mobile-menu{
+    cursor: pointer;
+    display: none;   
+}
+
+.mobile-menu #div{   
+    width: 30px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+.clip{
+    height: 200px;
+    border-radius: 20px;
+    padding: 10px;
+    
+}
+.container{
+
+    align-items: center;
+    justify-content: center;
+}
+fieldset{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+    margin-bottom: 0;
+    gap: 10px;
+    border: none;
+}
+.card{
+    height: 270px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px black;
+    
+}
+
+.intro{
+height: 30px;
+padding: 8px;
+border-radius: 10px;
+bottom: 240px;
+background-color: rgba(46, 40, 72, 0.533);
+}
+
+.titulo2{
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+p{
+    font-size: 15px;
+    text-align: justify;
+    color: #fff;
+    width: 400px;
+    margin: 15px 15px;
+    visibility: hidden;
+    opacity: 0;
+}
+legend{
+    font-size: 25px;
+    color: #fff;
+    padding: 15px;
+    
+}
+.card:hover{
+    height: 500px;
+    cursor: pointer;
+    background-color: rgba(72, 72, 95, 0.578);
+}
+.card:hover .intro{
+    height: 220px;
+    bottom: 240px;
+    background: rgba(46, 49, 65, 0.965);
+}
+.card:hover p{
+    visibility: visible;
+    opacity: 1;
+}
+.card:hover .clip{
+   height: 230px;
+    transition: 2s;
+}
+
+@media  screen and (max-width: 1020px){
+    body{
+        overflow-x: hidden;
+    
+    }
+p{
+    font-size: 13px;
+    
+}
+    fieldset{
+        flex-direction: column;
+        width: 20px;
+     
+      
+    }
+    .titulo{
+        font-size: 20px;
+    }
+    .logo{
+        width: 90px;
+        height: 90px;
+    }
+    legend{
+        font-size: 20px;
+    }
+.titulo2{
+    font-size: 15px;
+    
+    }
+       .card{
+        height: 220px;
+        width: 300px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 20px black;
+        margin-left: 10px;
+        
+       }
+
+       .card:hover{
+        height: 350px;
+        width: 300px;
+        cursor: pointer;
+        background-color: rgba(72, 72, 95, 0.578);
+        margin-bottom: 100px;
+    }
+    .card:hover .intro{
+        height: 170px;
+    
+        bottom: 240px;
+        background: rgba(46, 49, 65, 0.965);
+    }
+    .card:hover p{
+        visibility: visible;
+        opacity: 1;
+        width: 250px;
+    }
+    .card:hover .clip{
+       height: 160px;
+        transition: 2s;
+    }
+
+       .clip{
+        height: 150px;
+        
+        
+       }
+     
+      
+       .intro{
+        height: 30px;
+        padding: 8px;
+        
+        border-radius: 10px;
+        bottom: 240px;
+        background-color: rgba(46, 40, 72, 0.533);
+        
+        
+        
+        }
+
+        .nav-list{
+            position: absolute;
+            top: 8vh;
+            right: 0;
+            width: 10vh;
+            height: 92vh;  
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            transform: translateX(100%);
+            transition: transform 0.4s ease-in;
+        }
+        
+        .nav-list li{
+            margin-left: 0;
+            opacity: 0;
+            
+        }
+    
+        .mobile-menu{
+            display: block;
+            margin-left: 80%;
+            margin-bottom: 155px;
+        }
+
+} 
+
+@keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+  }
+  
+  .mobile-menu.active .line2 {
+    opacity: 0;
+  }
+  
+  .mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+   
+  }
+
+.nav-list.active{
+    transform: translateX(0);
+}
+
